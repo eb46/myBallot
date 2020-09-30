@@ -1,0 +1,84 @@
+@import './src/mainSCSS/mixins.scss';
+
+
+.Referendum {
+    background: darkgrey;
+    height: 100vh;
+    width: 100vw;
+    transition: 500ms ease-out;
+
+
+    .slide-down {
+        top: 1000px;
+        transition: 500ms ease;
+    }
+}
+
+.modalBottom {
+    position: absolute;
+    background: lightgrey;
+    top: 62px;
+    left: 0;
+    height: 769px;
+    width: 100%;
+    z-index: 50;
+    border-radius: 20px 20px 0 0;
+
+    h1 {
+        font-size: 2rem;
+        font-weight: bold;
+        padding: 0rem 1rem 0 1rem;
+    }
+
+   p{
+       padding-top: 1rem;
+       line-height: 1.2rem;
+   }
+
+    .exit-icon-container {
+        display: flex;
+        justify-content: flex-end;
+        padding: 1rem;
+
+        i {
+            font-size: 2rem;
+            color: grey;
+            
+        }
+
+    }
+}
+
+.choice-container{
+    background: #E5E5E5;
+    margin-top: 1rem;
+    text-align: left;
+
+    p {
+        padding-left: 1rem;
+    }
+
+    button {
+        @include buttonBase();
+        border-radius: 5px;
+        font-size: 1rem;
+        
+        
+    }
+
+    .confirm-button-container {
+        display: flex;
+        justify-content: flex-end;
+        padding-bottom: 1rem;
+        padding-right: 1rem;
+    }
+
+    .choice-toggle {
+        display: flex;
+        align-items: center;
+        padding-left: 1.5rem;
+        i {
+            padding-top: 1rem;
+        }
+    }
+}

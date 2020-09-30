@@ -1,0 +1,12 @@
+
+@import './src/mainSCSS/mixins.scss';
+@import './src/mainSCSS/variables.scss';
+@import './src/mainSCSS/reset.scss';
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+@import url('https://pro.fontawesome.com/releases/v5.10.0/css/all.css');
+
+.App {
+  text-align: center;
+  font-family: 'Roboto', sans-serif;
+}
+

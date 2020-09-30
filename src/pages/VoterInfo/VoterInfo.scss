@@ -1,0 +1,17 @@
+@import './src/mainSCSS/mixins.scss';
+
+
+.VoterInfo {
+  width: 50%;
+  margin: auto;
+
+  h1 {
+    padding: 2em 0 1em 0;
+  }
+
+  button {
+    @include buttonBase();
+    margin: 2em 0;
+
+  }
+}

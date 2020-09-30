@@ -1,0 +1,94 @@
+@import "./src/mainSCSS/mixins.scss";
+
+.OnboardingOne {
+  a {
+    text-decoration: none;
+  }
+
+  button {
+    @include backButton();
+  }
+
+  .image-placeholder {
+    @include imagePlaceholder();
+  }
+
+  p {
+    @include paragraph();
+    // padding: 5px 0;
+  }
+
+  .nextButton {
+    @include nextButton();
+  }
+}
+
+.OnboardingTwo {
+  a {
+    text-decoration: none;
+  }
+
+  button {
+    @include backButton();
+  }
+
+  .image-placeholder {
+    @include imagePlaceholder();
+  }
+
+  p {
+    @include paragraph();
+    // padding: 5px 0;
+  }
+
+  .nextButton {
+    @include nextButton();
+  }
+}
+
+.OnboardingThree {
+  a {
+    text-decoration: none;
+  }
+
+  button {
+    @include backButton();
+  }
+
+  .image-placeholder {
+    @include imagePlaceholder();
+  }
+
+  p {
+    @include paragraph();
+    // padding: 5px 0;
+  }
+
+  .nextButton {
+    @include nextButton();
+  }
+}
+
+.OnboardingFour {
+  a {
+    text-decoration: none;
+  }
+
+  button {
+    @include backButton();
+  }
+
+  .image-placeholder {
+    @include imagePlaceholder();
+  }
+
+  p {
+    @include paragraph();
+    // padding: 5px 0;
+  }
+
+  .nextButton {
+    @include nextButton();
+    font-size: 25px;
+  }
+}

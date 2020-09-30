@@ -1,0 +1,49 @@
+@mixin buttonBase {
+  font-size: 25px;
+  color: #F8F8F8;
+  background-color: #444444;
+  border: none;
+  border-radius: 5px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  width: 303px;
+}
+
+@mixin backButton {
+  border: none;
+  background: none;
+  font-size: 40px;
+  color: grey;
+  // border-radius: 50%;
+  display: block;
+  // width: 59px;
+  // height: 59px;
+  // box-shadow: 1px 3px 3px #888888;
+  cursor: pointer;
+  margin-top: 58px;
+  margin-left: 18px;
+}
+
+@mixin imagePlaceholder {
+  background: gray;
+  width: 259px;
+  height: 259px;
+  margin: 2em auto;
+}
+
+@mixin nextButton {
+  font-size: 36px;
+  color: black;
+  cursor: pointer;
+  border-radius: 13px;
+  border: none;
+  width: 280px;
+  height: 66px;
+  margin: 0 auto;
+  background: lightgray;
+  padding: 10px;
+}
+
+@mixin paragraph {
+  height: 50px;
+}

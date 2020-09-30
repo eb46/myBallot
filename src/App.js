@@ -11,7 +11,6 @@ import OnboardingFour from "./pages/Onboarding/Onboarding4";
 import StartForm from "./pages/GettingStarted/StartForm";
 import BuildBallot from "./pages/Ballot/BuildBallot";
 import ReferendumModal from "./pages/ReferendumModal/Referendum";
-import CandidateModal from "./pages/CandidateModal/Candidate";
 import VoterInfo from "./pages/VoterInfo/VoterInfo";
 import EndBallotPage from "./pages/EndBallot/EndBallotPage";
 
@@ -46,8 +45,7 @@ function App() {
         <Route path="/startform" component={StartForm} />
         <Route path="/voterinfo" component={VoterInfo} />
         <Route path="/buildballot" component={BuildBallot} />
-        <Route path="/referendums" component={ReferendumModal} />
-        <Route path="/candidate" component={CandidateModal} />
+        <Route path="/referendum" component={ReferendumModal} />
         <Route path="/endballot" component={EndBallotPage} />
       </DataContext.Provider>
     </div>

@@ -11,7 +11,7 @@ function OnboardingThree(props) {
       </Link>
       <div className="image-placeholder">Image Placeholder</div>
       <p>Read about referendums and candidates and make your selections</p>
-      <Link to="/onboarding4">
+      <Link to="onboarding4">
         <button className="nextButton">Next</button>
       </Link>
       <ProgressBar pathname={props.location.pathname} className="progressBar"/>

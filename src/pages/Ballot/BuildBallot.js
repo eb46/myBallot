@@ -35,12 +35,17 @@ function BallotMeasure(){
 
               <CategoryContainers />
 
-              <Link to='/endballot'>
-                <button>Complete myBallot</button>
-              </Link>
-              <Link to='/startform'>
-                <a>Start Over</a>
-              </Link>
+              <div className="ballot-bottom-buttons">
+                <Link to='/endballot'>
+                  <button>Complete myBallot</button>
+                </Link>
+                <Link 
+                  className="star-over-button"
+                  to='/startform'>
+                  <a>Start Over</a>
+                </Link>
+              </div>
+              
             </div>
         </div>
     )

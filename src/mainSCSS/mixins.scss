@@ -1,6 +1,6 @@
 @mixin buttonBase {
   font-size: 25px;
-  color: #F8F8F8;
+  color: #f8f8f8;
   background-color: #444444;
   border: none;
   border-radius: 5px;
@@ -45,5 +45,8 @@
 }
 
 @mixin paragraph {
-  height: 50px;
+  height: 120px;
+  width: 300px;
+  font-size: 20px;
+  margin: 80px auto 0px auto;
 }

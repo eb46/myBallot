@@ -7,7 +7,9 @@ function OnboardingFour(props) {
   return (
     <div className="OnboardingFour">
       <Link to="onboarding3">
-        <button><i class="fas fa-chevron-circle-left"></i></button>
+        <button>
+          <i class="fas fa-chevron-circle-left"></i>
+        </button>
       </Link>
       <div className="image-placeholder">Image Placeholder</div>
       <p>Print, email or share your ballot choices</p>

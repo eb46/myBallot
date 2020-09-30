@@ -1,4 +1,5 @@
 import React, {useState} from 'react'
+import Ballot from '../Ballot/BuildBallot'
 import './Referendum.scss'
 
 function Referendum() {

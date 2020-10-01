@@ -1,6 +1,6 @@
 import React from "react";
 import './EndBallotPage.scss';
-import dklogo from "../../images/myBallotWA_Logo_dark.svg";
+import dklogo from "../../images/myBallotWA_Black.svg";
 import printthis from "../../images/myballotWA_print.svg";
 import email from "../../images/myballotWA_email.svg";
 

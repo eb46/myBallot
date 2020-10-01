@@ -4,7 +4,7 @@ import { DataContext } from '../../App'
 
 
 
-function CandidateCard({candidate, categoryName}) {
+function CandidateCard({candidate, categoryName, position}) {
     const { ballot, setBallot } = useContext(DataContext);
 
     const handleAddClick = ()=>{
@@ -13,7 +13,8 @@ function CandidateCard({candidate, categoryName}) {
 
         b.push({
             name: candidate.BallotName,
-            party: candidate.PartyName
+            party: candidate.PartyName,
+            position: position
         })
 
         setBallot({

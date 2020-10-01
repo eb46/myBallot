@@ -26,7 +26,7 @@ function VoterInfo() {
         </button>
       </Link>
       <h1>Upcoming Elections</h1>
-      <h1 className="dataPulled">{category.Name}</h1>
+      <h1 className="dataPulled">{data.Name}</h1>
       <p>Complete your ballot selection for this election</p>
       <Link to="/buildballot">
         <button className="beginButton">Begin myBallot</button>

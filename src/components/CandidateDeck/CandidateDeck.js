@@ -5,11 +5,13 @@ import './CandidateDeck.scss'
 function CandidateDeck({cardData, categoryName}) {
     const candidates = cardData.Candidates
 
+    console.log('cardData', cardData)
+
     let candidateMap =[];
 
     if(candidates !== undefined){
         candidateMap = candidates.map((candidate)=>(
-            <CandidateCard candidate={candidate} categoryName={categoryName}/>
+            <CandidateCard candidate={candidate} categoryName={categoryName} position={cardData.BallotTitle}/>
         ))
     }
 

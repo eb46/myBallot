@@ -21,7 +21,7 @@ function App() {
   const [ data, setData ] = useState({})
   const [ address, setAddress ] = useState({})
   const [ ballot, setBallot ] = useState({
-    measures: [],
+    Measures: [],
     FederalCandidates: [],
     StatewideCandidates: [],
     LegislativeCandidates: [],

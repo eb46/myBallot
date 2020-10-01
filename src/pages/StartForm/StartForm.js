@@ -79,7 +79,7 @@ function StartForm() {
             />
           </div>
         </div>
-      
+
           <button type='submit' id="findElections">
             Find my elections
           </button>

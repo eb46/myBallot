@@ -20,9 +20,16 @@ export const DataContext = createContext();
 function App() {
   const [ data, setData ] = useState({})
   const [ address, setAddress ] = useState({})
- 
+  const [ ballot, setBallot ] = useState({
+    measures: [],
+    FederalCandidates: [],
+    StatewideCandidates: [],
+    LegislativeCandidates: [],
+    JudicialCandidates: []
+  })
 
   console.log('address', address)
+  console.log('ballot', ballot)
 
 
   useEffect(()=>{
@@ -42,7 +49,7 @@ function App() {
 
   return (
     <div className="App">
-      <DataContext.Provider value={{data, setData, address, setAddress}}>
+      <DataContext.Provider value={{data, setData, address, setAddress, ballot, setBallot}}>
         <Route exact path="/" component={LandingPage} />
         <Route path="/onboarding1" component={OnboardingOne} />
         <Route path="/onboarding2" component={OnboardingTwo} />

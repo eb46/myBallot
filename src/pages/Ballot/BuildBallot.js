@@ -7,8 +7,9 @@ import logo from '../../images/myBallotWA_Logo_small.svg'
 import ReferendumModal from '../ReferendumModal/Referendum'
 import CandidateModal from '../CandidateModal/Candidate'
 
+
 function BallotMeasure(){
-    const {data} = useContext(DataContext);
+    const {data, ballot, setBallot} = useContext(DataContext);
     const [ category, setCategory ] = useState([])
     const [ categoryName, setCategoryName ] = useState('')
     const [ isDropCardClicked, setIsDroCardClicked] = useState(false)

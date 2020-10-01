@@ -28,7 +28,7 @@ function Candidate({isDropCardClicked, handleDropCardClick, categoryName, cardDa
                 <h1>District 4</h1>
                 <p>Candidates</p>
 
-                <CandidateDeck cardData={cardData}/>
+                <CandidateDeck cardData={cardData} categoryName={categoryName}/>
 
             </div>
         </div>

@@ -4,8 +4,10 @@ import "./VoterInfo.scss";
 import { DataContext } from "../../App";
 
 function VoterInfo() {
-  const { data } = useContext(DataContext);
+  const { data, address } = useContext(DataContext);
   const [category, setCategory] = useState([]);
+
+  console.log('address in VoterInfo', address)
 
   useEffect(() => {
     if (data.Categories !== undefined) {

@@ -1,6 +1,12 @@
 @import "./src/mainSCSS/mixins.scss";
 
 .OnboardingOne {
+
+  h1 {
+    font-size: 36px;
+    font-weight: bold;
+  }
+
   a {
     text-decoration: none;
   }
@@ -24,6 +30,12 @@
 }
 
 .OnboardingTwo {
+
+  h1 {
+    font-size: 36px;
+    font-weight: bold;
+  }
+
   a {
     text-decoration: none;
   }
@@ -47,6 +59,12 @@
 }
 
 .OnboardingThree {
+
+  h1 {
+    font-size: 36px;
+    font-weight: bold;
+  }
+
   a {
     text-decoration: none;
   }
@@ -70,6 +88,12 @@
 }
 
 .OnboardingFour {
+
+  h1 {
+    font-size: 36px;
+    font-weight: bold;
+  }
+
   a {
     text-decoration: none;
   }
@@ -84,7 +108,11 @@
 
   p {
     @include paragraph();
-    // padding: 5px 0;
+    font-size: 18px;
+  }
+
+  span {
+    color: #399741;
   }
 
   .nextButton {

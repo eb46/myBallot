@@ -1,8 +1,12 @@
-import React, {useState, useEffect} from 'react'
+import React, {useState, useEffect, useContext} from 'react'
 import Ballot from '../Ballot/BuildBallot'
 import './Referendum.scss'
+import { DataContext } from '../../App'
+
 
 function Referendum({isDropCardClicked, handleDropCardClick, categoryName, cardData}) {
+    const { ballot, setBallot } = useContext(DataContext);
+
     const [ approved, setApproved ] = useState(false)
     const [ rejected, setRejected ] = useState(false)
     const [ isDisplay, setIsDisplay ] = useState(false)
@@ -13,6 +17,20 @@ function Referendum({isDropCardClicked, handleDropCardClick, categoryName, cardD
         }
     }, [isDropCardClicked])
 
+    const handleAddClick = ()=>{
+        
+        let b = ballot['Measures']
+
+        b.push({
+           name: cardData.Name,
+           isApproved: approved
+        })
+
+        setBallot({
+            ...ballot,
+            'Measures' : b
+        })
+    }
 
     const handleDisplayClick = () =>{
         setIsDisplay(false)
@@ -59,7 +77,7 @@ function Referendum({isDropCardClicked, handleDropCardClick, categoryName, cardD
                         <p>Rejected</p>
                     </div>
                     <div className='confirm-button-container'>
-                        <button>Confirm My Choice</button>
+                        <button onClick={handleAddClick}>Confirm My Choice</button>
                     </div>
                 </div>
                 <p>Campaign Contributions</p>

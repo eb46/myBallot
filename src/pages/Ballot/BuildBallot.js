@@ -22,10 +22,10 @@ function BallotMeasure(){
         <div className="ballot-measure">
             <div className="nav-links">
               <Link 
-                    className="start-over-button"
-                    to='/startform'>
-                    <a>Start Over</a>
-                  </Link>
+                className="start-over-button"
+                to='/startform' >
+                    Start Over
+              </Link>
               <div className="help-container">
                 Help 
                 <i class="far fa-question-circle"></i>

@@ -1,23 +1,20 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import './EndBallotPage.scss';
-import logo from "../../images/MyBallotWA.svg";
-import print from "../../images/myballotWA_print.svg";
+import logo from "../../images/myBallotWA_Logo_large.svg";
+import printthis from "../../images/myballotWA_print.svg";
 import email from "../../images/myballotWA_email.svg";
-
 
 function EndBallotPage() {
   return (
     <div className='EndBallotPage'>
-      <img src={logo} alt="Site logo. myBallotWA" />
+      <img id="logo" src={logo} alt="Site logo. myBallotWA" />
       <p>ELECTION: November 3, 2020</p>
       <p>Below is your completed ballot</p>
-      <div id="ballot-container">
-
-      </div>
       <div id="icon-container">
-        <img src={print} alt="Click image to print ballot"/>
-        <img src={email} alt="Click image to email ballot"/>
+        <button id="print" ><img src={printthis} alt="Click image to print ballot"/></button>
+        <button id="email"><img src={email} alt="Click image to email ballot"/></button>
+      </div>
+      <div id="ballot-container">
       </div>
     </div>
   );

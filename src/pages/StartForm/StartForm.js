@@ -80,10 +80,11 @@ function StartForm() {
           </div>
         </div>
 
-          <button type='submit' id="findElections">
+        <div className="bottomButtonDiv">
+          <button type="submit" id="findElections">
             Find my elections
           </button>
-        
+        </div>
       </form>
     </div>
   );

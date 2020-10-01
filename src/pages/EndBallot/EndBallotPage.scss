@@ -6,7 +6,7 @@
         margin-top: 100px;
     }
 
-    #print {
+    button {
         background: none;
         border: none;
     }
@@ -19,6 +19,7 @@
     #icon-container {
         display: flex;
         flex-direction: row;
+        justify-content: center;
     }
 
 }

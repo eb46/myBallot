@@ -26,6 +26,9 @@
 
   .nextButton {
     @include nextButton();
+    color: #684900;
+    font-size: 26px;
+    font-weight: bold;
   }
 }
 
@@ -55,6 +58,9 @@
 
   .nextButton {
     @include nextButton();
+    color: #684900;
+    font-size: 26px;
+    font-weight: bold;
   }
 }
 
@@ -83,6 +89,9 @@
 
   .nextButton {
     @include nextButton();
+    color: #684900;
+    font-size: 26px;
+    font-weight: bold;
   }
 }
 
@@ -116,5 +125,8 @@
 
   .nextButton {
     @include nextButton();
+    color: #684900;
+    font-size: 26px;
+    font-weight: bold;
   }
 }

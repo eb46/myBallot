@@ -56,6 +56,9 @@
 
   #findElections {
     @include nextButton();
+    color: #684900;
+    font-size: 22px;
+    font-weight: bold;
     margin: 0 auto;
     width: 261px;
   }

@@ -2,8 +2,8 @@ import React from "react";
 import { Link } from "react-router-dom";
 import './EndBallotPage.scss';
 import logo from "../../images/MyBallotWA.svg";
-import print from "../../images/";
-import email from "../../images/";
+import print from "../../images/myballotWA_print.svg";
+import email from "../../images/myballotWA_email.svg";
 
 
 function EndBallotPage() {
@@ -16,8 +16,8 @@ function EndBallotPage() {
 
       </div>
       <div id="icon-container">
-        <img src={print} alt=""/>
-        <img src={email} alt=""/>
+        <img src={print} alt="Click image to print ballot"/>
+        <img src={email} alt="Click image to email ballot"/>
       </div>
     </div>
   );

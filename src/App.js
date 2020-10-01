@@ -19,6 +19,10 @@ export const DataContext = createContext();
 
 function App() {
   const [ data, setData ] = useState({})
+  const [ address, setAddress ] = useState({})
+
+  console.log('address', address)
+
 
   useEffect(()=>{
     getData()
@@ -37,7 +41,7 @@ function App() {
 
   return (
     <div className="App">
-      <DataContext.Provider value={{data}}>
+      <DataContext.Provider value={{data, setData, address, setAddress}}>
         <Route exact path="/" component={LandingPage} />
         <Route path="/onboarding1" component={OnboardingOne} />
         <Route path="/onboarding2" component={OnboardingTwo} />

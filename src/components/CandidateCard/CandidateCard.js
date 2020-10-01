@@ -1,8 +1,27 @@
-import React from 'react'
+import React, {useContext} from 'react'
 import './CandidateCard.scss'
+import { DataContext } from '../../App'
 
 
-function CandidateCard({candidate}) {
+
+function CandidateCard({candidate, categoryName}) {
+    const { ballot, setBallot } = useContext(DataContext);
+
+    const handleAddClick = ()=>{
+        let cName = categoryName.split(" ").join('')
+        let b = ballot[cName]
+
+        b.push({
+            name: candidate.BallotName,
+            party: candidate.PartyName
+        })
+
+        setBallot({
+            ...ballot,
+            cName : b
+        })
+    }
+
     return (
         
         <div className='candidate-card'>
@@ -18,7 +37,7 @@ function CandidateCard({candidate}) {
                     <li>2. Issue</li>
                     <li>3. Issue</li>
                 </ol>
-                <button>ADD TO BALLOT</button>
+                <button onClick={()=> handleAddClick()}>ADD TO BALLOT</button>
                 <button>LEARN MORE</button>
             </div>
         </div>

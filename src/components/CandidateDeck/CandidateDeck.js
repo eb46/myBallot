@@ -2,14 +2,14 @@ import React from 'react'
 import CandidateCard from '../CandidateCard/CandidateCard'
 import './CandidateDeck.scss'
 
-function CandidateDeck({cardData}) {
+function CandidateDeck({cardData, categoryName}) {
     const candidates = cardData.Candidates
 
     let candidateMap =[];
 
     if(candidates !== undefined){
         candidateMap = candidates.map((candidate)=>(
-            <CandidateCard candidate={candidate}/>
+            <CandidateCard candidate={candidate} categoryName={categoryName}/>
         ))
     }
 

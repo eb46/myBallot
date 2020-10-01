@@ -35,10 +35,15 @@ function CandidateCard({ candidate, categoryName, position }) {
           <li>2. Issue</li>
           <li>3. Issue</li>
         </ol>
-        <button className="addToBallotButton" onClick={() => handleAddClick()}>
-          ADD TO BALLOT
-        </button>
-        <button className="learnMoreButton">LEARN MORE</button>
+        <div className="buttonGroup">
+          <button
+            className="addToBallotButton"
+            onClick={() => handleAddClick()}
+          >
+            ADD TO BALLOT
+          </button>
+          <button className="learnMoreButton">LEARN MORE</button>
+        </div>
       </div>
     </div>
   );

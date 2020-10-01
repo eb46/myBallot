@@ -44,6 +44,9 @@
       height: 40px;
       margin-bottom: 20px;
     }
+    .bottomButtonDiv {
+      margin-top: 30px;
+    }
   }
 
   a {
@@ -51,7 +54,9 @@
   }
 
   #findElections {
-    @include buttonBase();
+    @include nextButton();
+    margin: 0 auto;
+    width: 261px;
   }
 }
 

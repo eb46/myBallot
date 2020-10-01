@@ -1,14 +1,22 @@
-import React, {useState} from 'react'
+import React, {useState, useEffect} from 'react'
 import Ballot from '../Ballot/BuildBallot'
 import './Referendum.scss'
 
-function Referendum() {
+function Referendum({isDropCardClicked, handleDropCardClick, categoryName}) {
     const [ approved, setApproved ] = useState(false)
     const [ rejected, setRejected ] = useState(false)
-    const [ isDisplay, setIsDisplay ] = useState(true)
+    const [ isDisplay, setIsDisplay ] = useState(false)
+
+    useEffect(()=>{
+        if(isDropCardClicked && categoryName === 'Measures'){
+            setIsDisplay(true)
+        }
+    }, [isDropCardClicked])
+
 
     const handleDisplayClick = () =>{
         setIsDisplay(false)
+        handleDropCardClick()
     }
 
     const handleApproveClick = ()=> {
@@ -33,7 +41,7 @@ function Referendum() {
     let display = isDisplay ? '' : 'slide-down'
 
     return (
-        <div className='Referendum'>
+       
             <div className={`modalBottom ${display}`}>
                 <div className='exit-icon-container' onClick={handleDisplayClick}>
                     <i class="far fa-times-circle"></i>
@@ -60,7 +68,7 @@ function Referendum() {
                 <p>Campaign Contributions</p>
                 <p>Full Text</p>
             </div>
-        </div>
+        
     )
 }
 

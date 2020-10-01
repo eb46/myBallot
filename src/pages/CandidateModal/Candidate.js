@@ -1,38 +1,42 @@
-import React, {useState, useEffect} from 'react'
-import './Candidate.scss'
+import React, { useState, useEffect } from "react";
+import "./Candidate.scss";
 
-import CandidateDeck from '../../components/CandidateDeck/CandidateDeck'
+import CandidateDeck from "../../components/CandidateDeck/CandidateDeck";
 
-function Candidate({isDropCardClicked, handleDropCardClick, categoryName, cardData}) {
-    const [ isDisplay, setIsDisplay ] = useState(false)
+function Candidate({
+  isDropCardClicked,
+  handleDropCardClick,
+  categoryName,
+  cardData,
+}) {
+  const [isDisplay, setIsDisplay] = useState(false);
 
-    useEffect(()=>{
-        if(isDropCardClicked && categoryName !== 'Measures'){
-            setIsDisplay(true)
-        }
-    }, [isDropCardClicked])
-
-    const handleDisplayClick = () =>{
-        setIsDisplay(false)
+  useEffect(() => {
+    if (isDropCardClicked && categoryName !== "Measures") {
+      setIsDisplay(true);
     }
+  }, [isDropCardClicked]);
 
-    let display = isDisplay ? '' : 'slide-down'
+  const handleDisplayClick = () => {
+    setIsDisplay(false);
+  };
 
-    return (
-        <div className='Candidate'>
-            <div className= {`candidate-modal-bottom ${display}`}>
-                <div className='exit-icon-container' onClick={handleDisplayClick}>
-                    <i class="far fa-times-circle"></i>
-                </div>
-                <h1>City Council</h1>
-                <h1>District 4</h1>
-                <p>Candidates</p>
+  let display = isDisplay ? "" : "slide-down";
 
-                <CandidateDeck cardData={cardData} categoryName={categoryName}/>
-
-            </div>
+  return (
+    <div className="Candidate">
+      <div className={`candidate-modal-bottom ${display}`}>
+        <div className="exit-icon-container" onClick={handleDisplayClick}>
+          <i class="far fa-times-circle"></i>
         </div>
-    )
+        <h1>City Council</h1>
+        <h1>District 4</h1>
+        <p>Candidates</p>
+
+        <CandidateDeck cardData={cardData} categoryName={categoryName} />
+      </div>
+    </div>
+  );
 }
 
-export default Candidate
+export default Candidate;

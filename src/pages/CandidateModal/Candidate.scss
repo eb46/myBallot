@@ -1,4 +1,5 @@
-.candidate-modal-bottom {
+.candidate-modal-bottom,
+.slide-down {
   display: block;
   position: fixed;
   background: lightgrey;
@@ -34,6 +35,7 @@
   }
 }
 
-.slide-down{
-    
+.slide-down {
+  height: 13vh;
+  transition: height 4s ease;
 }

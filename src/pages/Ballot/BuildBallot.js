@@ -2,7 +2,7 @@ import React, {useContext, useEffect, useState} from "react";
 import { Link } from 'react-router-dom'
 import { DataContext } from '../../App'
 import './BuildBallot.scss'
-import CategoryContainers from './Categories/CategoryContainers'
+import CategoryContainers from '../../components/Categories/CategoryContainers'
 import logo from '../../images/MyBallotWA.svg'
 
 function BallotMeasure(){

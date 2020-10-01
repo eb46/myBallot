@@ -1,12 +1,12 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "./LandingPage.scss";
-import logo from "../../images/MyBallotWA.svg";
+import logo from "../../images/myBallotWA_Logo_large.svg";
 
 function LandingPage() {
   return (
     <div className="LandingPage">
-      <img src={logo} alt='Site logo. myBallotWA' />
+      <img src={logo} alt="Site logo. myBallotWA" />
       <p>Build a better ballot</p>
       <p>Find all of the information you need to be ready for election day</p>
       <div id="button-div">

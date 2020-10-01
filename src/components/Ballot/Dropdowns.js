@@ -3,7 +3,7 @@ import './Dropdowns.scss'
 import DropdownCard from './DropdownCard'
 
 
-function Dropdowns({category, name, clickedName}){
+function Dropdowns({category, name, clickedName, handleDropCardClick}){
     
     let style = name === clickedName ? 'open-dropdown' : 'closed-dropdown';
 
@@ -17,7 +17,9 @@ function Dropdowns({category, name, clickedName}){
                     <>
                         <DropdownCard
                             key={index}
-                            races={races} />
+                            races={races} 
+                            handleDropCardClick={handleDropCardClick}
+                            />
                     </>
                 )}
             </div>

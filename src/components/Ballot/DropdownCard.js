@@ -1,7 +1,10 @@
 import React from 'react'
 import './DropdownCard.scss'
 
-function DropdownCard({races}) {
+function DropdownCard({races, handleDropCardClick}) {
+    
+
+
     return(
         <div className='dropdown-card'>
             <div className='card-img'>
@@ -17,8 +20,11 @@ function DropdownCard({races}) {
                         Placeholder text
                 </h1>
                 <button
-                    className="select-position-button">
+                    className="select-position-button"
+                    onClick={handleDropCardClick}
+                    >
                     Select Position
+                    
                 </button>
             </div>
         </div>

@@ -1,7 +1,7 @@
 @mixin buttonBase {
   font-size: 25px;
   color: #684900;
-  background-color: #EFB11E;
+  background-color: #efb11e;
   border: none;
   border-radius: 5px;
   padding-top: 15px;
@@ -20,7 +20,7 @@
   // height: 59px;
   // box-shadow: 1px 3px 3px #888888;
   cursor: pointer;
-  margin-top: 58px;
+  margin-top: 38px;
   margin-left: 18px;
 }
 
@@ -39,13 +39,13 @@
   width: 280px;
   height: 60px;
   margin: 0 auto 50px auto;
-  background: #EFB11E;
+  background: #efb11e;
   padding: 10px;
 }
 
 @mixin paragraph {
   text-align: center;
-  color: #6F6F74;
+  color: #6f6f74;
   height: 106px;
   width: 281px;
   line-height: 23px;

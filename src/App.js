@@ -8,7 +8,7 @@ import OnboardingOne from "./pages/Onboarding/Onboarding1";
 import OnboardingTwo from "./pages/Onboarding/Onboarding2";
 import OnboardingThree from "./pages/Onboarding/Onboarding3";
 import OnboardingFour from "./pages/Onboarding/Onboarding4";
-import StartForm from "./pages/GettingStarted/StartForm";
+import StartForm from "./pages/StartForm/StartForm";
 import BuildBallot from "./pages/Ballot/BuildBallot";
 import ReferendumModal from "./pages/ReferendumModal/Referendum";
 import CandidateModal from "./pages/CandidateModal/Candidate";
@@ -20,6 +20,7 @@ export const DataContext = createContext();
 function App() {
   const [ data, setData ] = useState({})
   const [ address, setAddress ] = useState({})
+ 
 
   console.log('address', address)
 

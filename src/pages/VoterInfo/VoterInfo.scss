@@ -32,14 +32,7 @@
   }
 
   .beginButton {
-    margin: 0 auto;
-    width: 300px;
-    height: 70px;
-    font-size: 25px;
-    font-weight: bold;
-    color: white;
-    background-color: #424040;
-    border-radius: 10px;
-    margin-top: 20px;
+    @include nextButton();
+    margin-top: 60px;
   }
 }

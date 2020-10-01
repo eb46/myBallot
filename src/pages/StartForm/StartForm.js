@@ -79,6 +79,15 @@ function StartForm() {
             />
           </div>
         </div>
+<<<<<<< HEAD:src/pages/GettingStarted/StartForm.js
+=======
+      
+          <button type='submit' id="findElections">
+            Find my elections
+          </button>
+        
+      </form>
+>>>>>>> e5d0481d9aa096f5817ecb90707e7ea989c5789c:src/pages/StartForm/StartForm.js
 
         <button type="submit" className="findElections">
           Find my elections

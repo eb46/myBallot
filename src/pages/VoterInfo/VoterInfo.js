@@ -26,7 +26,10 @@ function VoterInfo() {
         </button>
       </Link>
       <h1>Upcoming Elections</h1>
-      <h1 className="dataPulled">{data.Name}</h1>
+      <div className="election-date">
+        <h1 className="dataPulled">November 3, 2020</h1>
+        <h3>2020 United States Presidential Election</h3>
+      </div>
       <p>Complete your ballot selection for this election</p>
       <Link to="/buildballot">
         <button className="beginButton">Begin myBallot</button>

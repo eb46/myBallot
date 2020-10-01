@@ -21,7 +21,7 @@ function Candidate({isDropCardClicked, handleDropCardClick, categoryName, cardDa
     return (
         <div className='Candidate'>
             <div className= {`candidate-modal-bottom ${display}`}>
-                <div className='exit-icon-container' onClick=       {handleDisplayClick}>
+                <div className='exit-icon-container' onClick={handleDisplayClick}>
                     <i class="far fa-times-circle"></i>
                 </div>
                 <h1>City Council</h1>

@@ -9,7 +9,7 @@ const ids = ['1'];
 
 function EndBallotPage() {
   return (
-    <div>
+    <div className='EndBallotPage'>
       <img src={logo} alt="Site logo. myBallotWA" />
       <p>ELECTION: November 3, 2020</p>
       <p>Below is your completed ballot</p>

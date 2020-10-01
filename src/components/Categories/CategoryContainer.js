@@ -1,7 +1,7 @@
 import React, {useContext, useEffect, useState} from "react";
-import { DataContext } from '../../../App'
+import { DataContext } from '../../App'
 
-function CategoryCard({category}){
+function CategoryCard({category, handleDisplayDropdown}){
 
     let raceTotal = category.Races.length
 
@@ -13,7 +13,9 @@ function CategoryCard({category}){
             <div className="card-count">
                 <p>{raceTotal}</p>
             </div>
-            <div className="card-arrow">
+            <div 
+                onClick={() => handleDisplayDropdown(category.Name)}
+                className="card-arrow">
                 <i class="fas fa-chevron-down"></i>
             </div>
         </div>

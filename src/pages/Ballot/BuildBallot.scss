@@ -1,28 +1,39 @@
 @import './src/mainSCSS/mixins.scss';
 
 .ballot-measure {
-    button {
-        @include buttonBase();
-        background-color: black;
-        color: white;
-        font-size: 22px;
-        font-weight: bold;
-        margin: 2rem;
-        width: 303px;
-        padding: 1rem 2.5rem;
-        border-radius: 5px;
-    }
+    background-color: #E5E5E5;
+    height: 100vh;
 
-    a {
-        text-decoration: none;
+    .ballot-bottom-buttons {
+        display: flex;
+        flex-direction: column;
+        
 
-        &:hover {
-            color: gray
+        button {
+            @include buttonBase();
+            background-color: #333333;
+            color: white;
+            font-size: 22px;
+            font-weight: bold;
+            margin: 1rem 2rem 1.5rem 2rem;
+            width: 303px;
+            padding: 1rem 2.5rem;
+            border-radius: 5px;
         }
-
-        &:visited {
+    
+        a {
+            text-decoration: none;
             color: black;
+    
+            &:hover {
+                color: gray;
+            }
+    
+            &:visited {
+                color: black;
+            }
         }
+        
     }
 
     .election-date {
@@ -35,7 +46,7 @@
     }
 
     .help-container {
-        margin: 2rem 2em 0 0;
+        padding: 2rem 2rem 0 0;
         text-align: right;
         i {
             margin: 5px;

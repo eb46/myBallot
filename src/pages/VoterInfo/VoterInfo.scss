@@ -32,7 +32,7 @@
   }
 
   .beginButton {
-    @include buttonBase();
+    @include nextButton();
     margin-top: 60px;
   }
 }

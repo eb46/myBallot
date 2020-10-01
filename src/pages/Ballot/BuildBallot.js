@@ -2,7 +2,7 @@ import React, {useContext, useEffect, useState} from "react";
 import { Link } from 'react-router-dom'
 import { DataContext } from '../../App'
 import './BuildBallot.scss'
-import CategoryContainers from './Categories/CategoryContainers'
+import CategoryContainers from '../../components/Categories/CategoryContainers'
 import logo from '../../images/MyBallotWA.svg'
 
 function BallotMeasure(){
@@ -35,12 +35,17 @@ function BallotMeasure(){
 
               <CategoryContainers />
 
-              <Link to='/endballot'>
-                <button>Complete myBallot</button>
-              </Link>
-              <Link to='/startform'>
-                <a>Start Over</a>
-              </Link>
+              <div className="ballot-bottom-buttons">
+                <Link to='/endballot'>
+                  <button>Complete myBallot</button>
+                </Link>
+                <Link 
+                  className="star-over-button"
+                  to='/startform'>
+                  <a>Start Over</a>
+                </Link>
+              </div>
+              
             </div>
         </div>
     )

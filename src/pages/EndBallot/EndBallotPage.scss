@@ -1,0 +1,18 @@
+
+.EndBallotPage {
+    background: none;
+
+    img {
+        margin-top: 100px;
+    }
+
+    #ballot-container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    #icon-container {
+        display: flex;
+        flex-direction: row;
+    }
+}

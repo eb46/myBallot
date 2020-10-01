@@ -1,9 +1,20 @@
-import React from 'react'
+import React, {useContext} from 'react'
 import './DropdownCard.scss'
+import { DataContext } from '../../App'
 
-function DropdownCard({races, handleDropCardClick}) {
+function DropdownCard({races, handleDropCardClick, clickedName}) {
+    const { ballot, setBallot } = useContext(DataContext);
+
+    console.log(ballot)
     
+    let cName = clickedName.split(" ").join('') 
+    let ballotArray = ballot[cName]
 
+    console.log('ballotArray', ballotArray)
+
+    // let ballotFilter = ballotArray.filter((candidate) => candidate.position === races.Name)
+
+    // console.log('ballotFilter', ballotFilter)
 
     return(
         <div className='dropdown-card'>

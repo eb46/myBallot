@@ -2,7 +2,7 @@ import React, { useContext } from "react";
 import "./CandidateCard.scss";
 import { DataContext } from "../../App";
 
-function CandidateCard({ candidate, categoryName }) {
+function CandidateCard({ candidate, categoryName, position }) {
   const { ballot, setBallot } = useContext(DataContext);
 
   const handleAddClick = () => {
@@ -12,6 +12,7 @@ function CandidateCard({ candidate, categoryName }) {
     b.push({
       name: candidate.BallotName,
       party: candidate.PartyName,
+      position: position,
     });
 
     setBallot({
@@ -34,15 +35,8 @@ function CandidateCard({ candidate, categoryName }) {
           <li>2. Issue</li>
           <li>3. Issue</li>
         </ol>
-        <div className="buttonGroup">
-          <button
-            className="addToBallotButton"
-            onClick={() => handleAddClick()}
-          >
-            ADD TO BALLOT
-          </button>
-          <button className="learnMoreButton">LEARN MORE</button>
-        </div>
+        <button onClick={() => handleAddClick()}>ADD TO BALLOT</button>
+        <button>LEARN MORE</button>
       </div>
     </div>
   );

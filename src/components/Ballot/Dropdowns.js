@@ -16,6 +16,7 @@ function Dropdowns({category, name, clickedName, handleDropCardClick}){
                 {category.Races.map((races, index) => 
                     <>
                         <DropdownCard
+                            clickedName={clickedName}
                             key={index}
                             races={races} 
                             handleDropCardClick={handleDropCardClick}

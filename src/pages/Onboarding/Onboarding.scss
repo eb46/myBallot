@@ -1,7 +1,7 @@
 @import "./src/mainSCSS/mixins.scss";
 
 .OnboardingOne {
-  height: 100vh;
+  height: 100%;
 
   h1 {
     font-size: 36px;
@@ -30,7 +30,7 @@
 }
 
 .OnboardingTwo {
-  height: 100vh;
+  height: 100%;
   h1 {
     font-size: 36px;
     font-weight: bold;
@@ -59,7 +59,7 @@
 }
 
 .OnboardingThree {
-  height: 100vh;
+  height: 100%;
   h1 {
     font-size: 36px;
     font-weight: bold;
@@ -87,7 +87,7 @@
 }
 
 .OnboardingFour {
-  height: 100vh;
+  height: 100%;
   h1 {
     font-size: 36px;
     font-weight: bold;
@@ -116,6 +116,5 @@
 
   .nextButton {
     @include nextButton();
-    font-size: 25px;
   }
 }

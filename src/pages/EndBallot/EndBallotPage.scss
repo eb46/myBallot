@@ -6,6 +6,11 @@
         margin-top: 100px;
     }
 
+    #print {
+        background: none;
+        border: none;
+    }
+
     #ballot-container {
         display: flex;
         flex-direction: column;
@@ -15,4 +20,5 @@
         display: flex;
         flex-direction: row;
     }
+
 }

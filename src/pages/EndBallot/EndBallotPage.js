@@ -1,10 +1,11 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import Printer, { print } from "react-pdf-print";
 import './EndBallotPage.scss';
-import logo from "../../images/MyBallotWA.svg";
-import print from "../../images/myballotWA_print.svg";
+import logo from "../../images/myBallotWA_Logo_small.svg";
+import printthis from "../../images/myballotWA_print.svg";
 import email from "../../images/myballotWA_email.svg";
 
+const ids = ['1'];
 
 function EndBallotPage() {
   return (
@@ -12,12 +13,14 @@ function EndBallotPage() {
       <img src={logo} alt="Site logo. myBallotWA" />
       <p>ELECTION: November 3, 2020</p>
       <p>Below is your completed ballot</p>
-      <div id="ballot-container">
-
-      </div>
+      <Printer>
+        <div> id={ids[0]}
+          <p>This is p tag. It has words in it.</p>
+        </div>
+      </Printer>
       <div id="icon-container">
-        <img src={print} alt="Click image to print ballot"/>
-        <img src={email} alt="Click image to email ballot"/>
+        <button id="print" onClick={() => print(ids)}><img src={printthis} alt="Click image to print ballot"/></button>
+        <button id="email"><img src={email} alt="Click image to email ballot"/></button>
       </div>
     </div>
   );

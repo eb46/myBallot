@@ -1,13 +1,14 @@
 import React, {useState} from 'react'
 import './Dropdowns.scss'
 
-function Dropdowns({showStyle}){
+
+function Dropdowns({name, clickedName}){
     
-    let style = showStyle ? 'open-dropdown' : 'closed-dropdown' 
+    let style = name === clickedName ? 'open-dropdown' : 'closed-dropdown' ;
 
     return(
         <>
-            <h1 className={style}>Hi</h1>
+            <h1 className={style}>{name}</h1>
         </>
     )
 }

@@ -11,6 +11,7 @@ import OnboardingFour from "./pages/Onboarding/Onboarding4";
 import StartForm from "./pages/GettingStarted/StartForm";
 import BuildBallot from "./pages/Ballot/BuildBallot";
 import ReferendumModal from "./pages/ReferendumModal/Referendum";
+import CandidateModal from "./pages/CandidateModal/Candidate";
 import VoterInfo from "./pages/VoterInfo/VoterInfo";
 import EndBallotPage from "./pages/EndBallot/EndBallotPage";
 
@@ -18,6 +19,10 @@ export const DataContext = createContext();
 
 function App() {
   const [ data, setData ] = useState({})
+  const [ address, setAddress ] = useState({})
+
+  console.log('address', address)
+
 
   useEffect(()=>{
     getData()
@@ -36,7 +41,7 @@ function App() {
 
   return (
     <div className="App">
-      <DataContext.Provider value={{data}}>
+      <DataContext.Provider value={{data, setData, address, setAddress}}>
         <Route exact path="/" component={LandingPage} />
         <Route path="/onboarding1" component={OnboardingOne} />
         <Route path="/onboarding2" component={OnboardingTwo} />
@@ -46,6 +51,7 @@ function App() {
         <Route path="/voterinfo" component={VoterInfo} />
         <Route path="/buildballot" component={BuildBallot} />
         <Route path="/referendum" component={ReferendumModal} />
+        <Route path="/candidate" component={CandidateModal} />
         <Route path="/endballot" component={EndBallotPage} />
       </DataContext.Provider>
     </div>

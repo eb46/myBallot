@@ -1,11 +1,38 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React, {useState, useEffect, useContext } from "react";
+import { Link, Redirect } from "react-router-dom";
 import "./StartForm.scss";
+import { DataContext } from '../../App'
 
 function StartForm() {
-  const handleSubmit = () => {
-    console.log("Submit");
+  const { address, setAddress } = useContext(DataContext)
+  const [ addressInfo, setAddressInfo] = useState({})
+  const [ isSubmit, setIsSubmit ] = useState(false)
+
+  useEffect(()=>{
+    if( address.streetAddress1 !== undefined ){
+      console.log('redirect')
+     
+    }
+  }, [address])
+
+  const handleSubmit = (e) => {
+    console.log('submit')
+    e.preventDefault()
+    setAddress(addressInfo)
+    setIsSubmit(true)
   };
+
+  const handleChange = (e) =>{
+    // console.log(`${e.target.name} : ${e.target.value}`)
+    setAddressInfo({
+      ...addressInfo,
+      [e.target.name] : e.target.value
+    })
+  }
+
+  if(isSubmit){
+    return <Redirect to='/voterinfo' />
+  }
 
   return (
     <div className="StartForm">
@@ -20,27 +47,31 @@ function StartForm() {
         below
       </p>
       <form onSubmit={handleSubmit}>
-        <lable>Street Address</lable>
-        <input />
+        <label>Street Address</label>
+        <input name='streetAddress1' value={addressInfo.streetAddress1} onChange={handleChange}/>
 
-        <lable>Street Address Line 2</lable>
-        <input />
+        <label>Street Address Line 2</label>
+        <input name='streetAddress2' value={addressInfo.streetAddress2} onChange={handleChange}/>
 
         <div className="twoColumns">
           <div className="column1">
-            <lable>City</lable>
-            <input />
+            <label>City</label>
+            <input name='city' value={addressInfo.city} onChange={handleChange}/>
           </div>
 
           <div className="column2">
-            <lable>Postal Code</lable>
-            <input />
+            <label>Postal Code</label>
+            <input name='postalCode' value={addressInfo.postalCode} onChange={handleChange}/>
           </div>
         </div>
+      
+          <button type='submit' className="findElections">
+            Find my elections
+            
+          </button>
+        
       </form>
-      <Link to="/voterinfo">
-        <button className="findElections">Find my elections</button>
-      </Link>
+
     </div>
   );
 }

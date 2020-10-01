@@ -1,13 +1,13 @@
 import React from "react";
 import './EndBallotPage.scss';
-import logo from "../../images/myBallotWA_Logo_large.svg";
+import dklogo from "../../images/myBallotWA_Logo_dark.svg";
 import printthis from "../../images/myballotWA_print.svg";
 import email from "../../images/myballotWA_email.svg";
 
 function EndBallotPage() {
   return (
     <div className='EndBallotPage'>
-      <img id="logo" src={logo} alt="Site logo. myBallotWA" />
+      <img id="logo" src={dklogo} alt="Site logo. myBallotWA" />
       <p>ELECTION: November 3, 2020</p>
       <p>Below is your completed ballot</p>
       <div id="icon-container">

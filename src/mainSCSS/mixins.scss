@@ -25,28 +25,31 @@
 }
 
 @mixin imagePlaceholder {
-  background: gray;
-  width: 259px;
-  height: 259px;
+  width: 284px;
+  height: 284px;
   margin: 2em auto;
 }
 
 @mixin nextButton {
-  font-size: 36px;
+  font-size: 28px;
   color: black;
   cursor: pointer;
-  border-radius: 13px;
+  border-radius: 5px;
   border: none;
   width: 280px;
-  height: 66px;
-  margin: 0 auto;
-  background: lightgray;
+  height: 60px;
+  margin: 0 auto 50px auto;
+  background: #EFB11E;
   padding: 10px;
 }
 
 @mixin paragraph {
-  height: 120px;
-  width: 300px;
+  text-align: center;
+  color: #6F6F74;
+  height: 106px;
+  width: 281px;
+  line-height: 23px;
   font-size: 20px;
-  margin: 80px auto 0px auto;
+  font-weight: bold;
+  margin: 10px auto 0px auto;
 }

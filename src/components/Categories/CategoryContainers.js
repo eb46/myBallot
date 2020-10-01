@@ -5,7 +5,7 @@ import Dropdowns from '../Ballot/Dropdowns'
 
 function CategoryContainers() {
     const {data} = useContext(DataContext);
-    const [ showDropdown, setShowDropdown ] = useState("closed")
+    const [ categoryName, setCategoryName ] = useState('')
     const [ categories, setCategories ] = useState([])
     
     useEffect(()=>{
@@ -17,16 +17,8 @@ function CategoryContainers() {
     }, [data])
 
     const handleDisplayDropdown = (name) => {
-        setShowDropdown(showDropdown === "closed" ? "open" : "closed")
-        console.log(name)
-    }
-
-    let style
-
-    if (showDropdown === "open") {
-        style = true
-    }   else if (showDropdown === "closed") {
-        style = false
+        setCategoryName(name)
+        if( categoryName === name) setCategoryName('')
     }
 
     return(
@@ -37,7 +29,9 @@ function CategoryContainers() {
                         category={category} 
                         handleDisplayDropdown={handleDisplayDropdown} />
                     <Dropdowns 
-                        showStyle={style} />
+                        name={category.Name}
+                        clickedName={categoryName}
+                         />
                 </>
             )}
         </>

@@ -1,10 +1,16 @@
-import React, {useState} from 'react'
+import React, {useState, useEffect} from 'react'
 import './Candidate.scss'
 
 import CandidateDeck from '../../components/CandidateDeck/CandidateDeck'
 
-function Candidate() {
-    const [ isDisplay, setIsDisplay ] = useState(true)
+function Candidate({isDropCardClicked, handleDropCardClick, categoryName}) {
+    const [ isDisplay, setIsDisplay ] = useState(false)
+
+    useEffect(()=>{
+        if(isDropCardClicked && categoryName !== 'Measures'){
+            setIsDisplay(true)
+        }
+    }, [isDropCardClicked])
 
     const handleDisplayClick = () =>{
         setIsDisplay(false)

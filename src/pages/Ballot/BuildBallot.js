@@ -4,10 +4,21 @@ import { DataContext } from '../../App'
 import './BuildBallot.scss'
 import CategoryContainers from '../../components/Categories/CategoryContainers'
 import logo from '../../images/myBallotWA_Logo_small.svg'
+import ReferendumModal from '../ReferendumModal/Referendum'
+import CandidateModal from '../CandidateModal/Candidate'
 
 function BallotMeasure(){
     const {data} = useContext(DataContext);
     const [ category, setCategory ] = useState([])
+    const [ categoryName, setCategoryName ] = useState('')
+    const [ isDropCardClicked, setIsDroCardClicked] = useState(false)
+    
+    
+
+    const handleDropCardClick = ()=>{
+      console.log('dropCardClick')
+      setIsDroCardClicked(!isDropCardClicked)
+    }
    
     useEffect(()=>{
         if(data.Categories !== undefined){
@@ -39,7 +50,17 @@ function BallotMeasure(){
             <p className="ballot-measure-instructions">Click to expand view and select the candidates and measures.</p>
             <div className="card-container">
 
-              <CategoryContainers />
+              <CategoryContainers categoryName={categoryName} setCategoryName={setCategoryName}
+              handleDropCardClick={handleDropCardClick}
+              />
+              <ReferendumModal isDropCardClicked={isDropCardClicked}
+              handleDropCardClick={handleDropCardClick}
+              categoryName={categoryName}
+              />
+              <CandidateModal isDropCardClicked={isDropCardClicked}
+              handleDropCardClick={handleDropCardClick}
+              categoryName={categoryName}
+              />
 
               <div className="ballot-bottom-buttons">
                 <Link to='/endballot'>

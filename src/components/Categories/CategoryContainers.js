@@ -3,9 +3,8 @@ import { DataContext } from '../../App'
 import CategoryContainer from './CategoryContainer'
 import Dropdowns from '../Ballot/Dropdowns'
 
-function CategoryContainers() {
+function CategoryContainers({ categoryName, setCategoryName, handleDropCardClick}) {
     const {data} = useContext(DataContext);
-    const [ categoryName, setCategoryName ] = useState('')
     const [ categories, setCategories ] = useState([])
     
     useEffect(()=>{
@@ -32,6 +31,7 @@ function CategoryContainers() {
                         category={category}
                         name={category.Name}
                         clickedName={categoryName}
+                        handleDropCardClick={handleDropCardClick}
                          />
                 </>
             )}

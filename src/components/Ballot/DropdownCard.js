@@ -1,22 +1,25 @@
 import React from 'react'
+import './DropdownCard.scss'
 
-function DropdownCard() {
+function DropdownCard({races}) {
     return(
         <div className='dropdown-card'>
             <div className='card-img'>
                 <i class="fas fa-user-circle"></i>
+                <p>No Position</p>
+                <p>Selected</p>
             </div>
             <div className='card-body'>
-                <h1>Canadate Name</h1>
-                <p>Prefers Democractic party</p>
-                <h2>I am about:</h2>
-                <ol>
-                    <li>1. Issue</li>
-                    <li>2. Issue</li>
-                    <li>3. Issue</li>
-                </ol>
-                <button>ADD TO BALLOT</button>
-                <button>LEARN MORE</button>
+                <h1 className="race-title">
+                    {races.Name}
+                </h1>
+                <h1 className="selected">
+                        Placeholder text
+                </h1>
+                <button
+                    className="select-position-button">
+                    Select Position
+                </button>
             </div>
         </div>
     )

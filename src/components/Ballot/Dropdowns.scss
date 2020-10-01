@@ -1,8 +1,12 @@
 .closed-dropdown {
     display: none;
-    background-color: gray;
 }
 
 .open-dropdown {
-    background-color: white;
+    background: rgb(244, 244, 244);
+    margin: 0 1.5em;
+    height: 400px;
+    overflow: scroll;
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
 }

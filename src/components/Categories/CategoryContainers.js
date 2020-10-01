@@ -28,7 +28,8 @@ function CategoryContainers() {
                     <CategoryContainer 
                         category={category} 
                         handleDisplayDropdown={handleDisplayDropdown} />
-                    <Dropdowns 
+                    <Dropdowns
+                        category={category}
                         name={category.Name}
                         clickedName={categoryName}
                          />

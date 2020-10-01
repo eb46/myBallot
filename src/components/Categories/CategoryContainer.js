@@ -1,5 +1,4 @@
-import React, {useContext, useEffect, useState} from "react";
-import { DataContext } from '../../App'
+import React from "react";
 
 function CategoryCard({category, handleDisplayDropdown}){
 

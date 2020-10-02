@@ -1,28 +1,15 @@
 @import './src/mainSCSS/mixins.scss';
 
-
-.Referendum {
-    background: darkgrey;
-    height: 100vh;
-    width: 100vw;
-    transition: 500ms ease-out;
-
-
-    .slide-down {
-        top: 1000px;
-        transition: 500ms ease;
-    }
-}
-
 .modalBottom {
-    position: absolute;
+    display: block;
+    position: fixed;
     background: lightgrey;
-    top: 62px;
+    bottom: 0vh;
     left: 0;
-    height: 769px;
+    height: 90vh;
     width: 100%;
     z-index: 50;
-    border-radius: 20px 20px 0 0;
+    border-radius: 20px;
 
     h1 {
         font-size: 2rem;
@@ -47,6 +34,10 @@
         }
 
     }
+
+
+
+
 }
 
 .choice-container{

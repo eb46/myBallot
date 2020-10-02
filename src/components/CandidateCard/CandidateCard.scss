@@ -1,5 +1,92 @@
-.canadate-card-container {
-    background: white;
-    padding: 1rem;
-    margin: 1rem;
+@import "./src/mainSCSS/mixins.scss";
+
+.candidate-card {
+  background: white;
+  display: flex;
+  padding: 0.3rem;
+  border-radius: 5px;
+  width: 345px;
+  height: 330px;
+  margin: 1rem auto;
+
+  h1 {
+    padding: 0;
+    font-size: 1.5rem;
+  }
+
+  p {
+    padding: 0.5rem 0;
+  }
+
+  .card-img {
+    display: flex;
+    background: grey;
+    width: 140px;
+    height: 224px;
+    margin-top: 1rem;
+    justify-content: center;
+    align-items: center;
+
+    i {
+      font-size: 5rem;
+    }
+  }
+
+  .card-body {
+    text-align: left;
+    margin-left: 1rem;
+    padding-top: 1rem;
+    width: 50%;
+
+    p {
+      font-size: 10px;
+    }
+
+    h2 {
+      font-size: 15px;
+    }
+
+    ol {
+      margin-bottom: 16px;
+    }
+
+    li {
+      padding-top: 0.2rem;
+      font-size: 12px;
+    }
+
+    .buttonGroup {
+      //   border: 1px solid red;
+      margin-top: 20px;
+    }
+
+    .addToBallotButton,
+    .learnMoreButton,
+    .addToBallotButtonSelected {
+      @include buttonBase();
+      width: 175px;
+      height: 40px;
+      padding: 0;
+      font-size: 15px;
+      border-radius: 0;
+      margin: 2px 0;
+      border: 1px solid #424242;
+    }
+
+    .addToBallotButton {
+      background-color: #424242;
+      color: white;
+    }
+
+    .addToBallotButtonSelected {
+      background-color: #efb11e;
+      color: #424242;
+      border: none;
+    }
+
+    .learnMoreButton {
+      background-color: white;
+      color: #424242;
+    }
+  }
 }

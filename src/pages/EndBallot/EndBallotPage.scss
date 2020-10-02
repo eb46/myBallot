@@ -1,0 +1,95 @@
+.EndBallotPage {
+  background: none;
+  height: 100%;
+
+  .nav-links {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 38px;
+
+    .start-over-button {
+      text-decoration: none;
+      color: rgb(15, 15, 15);
+      padding: 0 2rem 0 2rem;
+
+      &:hover {
+        color: gray;
+      }
+
+      &:visited {
+        color: black;
+      }
+    }
+  }
+
+  p {
+    font-size: 15px;
+    margin: 20px;
+    font-weight: 400;
+  }
+
+  #logo {
+    margin-top: 60px;
+  }
+
+  button {
+    background: none;
+    border: none;
+    width: 100px;
+  }
+
+  img {
+    width: 100px;
+    margin: 5px -10px 5px;
+  }
+
+  #ballot-container {
+    display: flex;
+    flex-direction: column;
+    margin: 10px auto;
+    width: 85%;
+    text-align: left;
+    h2 {
+      font-size: 30px;
+      padding: 10px;
+    }
+  }
+
+  #icon-container {
+    display: flex;
+    flex-direction: row;
+    width: 90%;
+    margin: 0 auto;
+    justify-content: space-around;
+  }
+
+  .infoCard {
+    background: #f4f4f4;
+    border-radius: 5px;
+    width: 99%;
+    padding: 8px 0;
+    margin: 0 auto;
+    margin-bottom: 8px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .infoCardBox {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+
+  .position {
+    font-weight: bold;
+    font-size: 15px;
+  }
+
+  .name {
+    font-weight: bold;
+    font-size: 15px;
+    color: #518e71;
+  }
+}

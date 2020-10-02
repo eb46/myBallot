@@ -1,6 +1,13 @@
 @import "./src/mainSCSS/mixins.scss";
 
 .OnboardingOne {
+  height: 100%;
+
+  h1 {
+    font-size: 36px;
+    font-weight: bold;
+  }
+
   a {
     text-decoration: none;
   }
@@ -15,15 +22,23 @@
 
   p {
     @include paragraph();
-    // padding: 5px 0;
   }
 
   .nextButton {
     @include nextButton();
+    color: #684900;
+    font-size: 26px;
+    font-weight: bold;
   }
 }
 
 .OnboardingTwo {
+  height: 100%;
+  h1 {
+    font-size: 36px;
+    font-weight: bold;
+  }
+
   a {
     text-decoration: none;
   }
@@ -38,15 +53,25 @@
 
   p {
     @include paragraph();
+    font-size: 18px;
     // padding: 5px 0;
   }
 
   .nextButton {
     @include nextButton();
+    color: #684900;
+    font-size: 26px;
+    font-weight: bold;
   }
 }
 
 .OnboardingThree {
+  height: 100%;
+  h1 {
+    font-size: 36px;
+    font-weight: bold;
+  }
+
   a {
     text-decoration: none;
   }
@@ -61,15 +86,23 @@
 
   p {
     @include paragraph();
-    // padding: 5px 0;
   }
 
   .nextButton {
     @include nextButton();
+    color: #684900;
+    font-size: 26px;
+    font-weight: bold;
   }
 }
 
 .OnboardingFour {
+  height: 100%;
+  h1 {
+    font-size: 36px;
+    font-weight: bold;
+  }
+
   a {
     text-decoration: none;
   }
@@ -84,11 +117,17 @@
 
   p {
     @include paragraph();
-    // padding: 5px 0;
+    font-size: 18px;
+  }
+
+  span {
+    color: #399741;
   }
 
   .nextButton {
     @include nextButton();
-    font-size: 25px;
+    color: #684900;
+    font-size: 26px;
+    font-weight: bold;
   }
 }

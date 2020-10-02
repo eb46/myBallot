@@ -1,13 +1,40 @@
-import React, {useState} from 'react'
+import React, {useState, useEffect, useContext} from 'react'
+import Ballot from '../Ballot/BuildBallot'
 import './Referendum.scss'
+import { DataContext } from '../../App'
 
-function Referendum() {
+
+function Referendum({isDropCardClicked, handleDropCardClick, categoryName, cardData}) {
+    const { ballot, setBallot } = useContext(DataContext);
+
     const [ approved, setApproved ] = useState(false)
     const [ rejected, setRejected ] = useState(false)
-    const [ isDisplay, setIsDisplay ] = useState(true)
+    const [ isDisplay, setIsDisplay ] = useState(false)
+
+    useEffect(()=>{
+        if(isDropCardClicked && categoryName === 'Measures'){
+            setIsDisplay(true)
+        }
+    }, [isDropCardClicked])
+
+    const handleAddClick = ()=>{
+        
+        let b = ballot['Measures']
+
+        b.push({
+           name: cardData.Name,
+           isApproved: approved
+        })
+
+        setBallot({
+            ...ballot,
+            'Measures' : b
+        })
+    }
 
     const handleDisplayClick = () =>{
         setIsDisplay(false)
+        handleDropCardClick()
     }
 
     const handleApproveClick = ()=> {
@@ -32,16 +59,13 @@ function Referendum() {
     let display = isDisplay ? '' : 'slide-down'
 
     return (
-        <div className='Referendum'>
+       
             <div className={`modalBottom ${display}`}>
                 <div className='exit-icon-container' onClick={handleDisplayClick}>
                     <i class="far fa-times-circle"></i>
                 </div>
-                <h1>Referendum Measure No.90</h1>
-                <p>The legislature passed Engrossed Substitute Senate Bill 5395 concerning comprehensive sexual health education. 
-
-                This bill would require school districts to adopt or develop, consistent with state standards, comprehensive age-appropriate sexual health education, as defined, for all students, and excuse students if their parents request.
-                </p>
+                <h1>{cardData.Name}</h1>
+                <p>{cardData.ShortDescription}</p>
                 <div  className='choice-container'>
                     <p>Should this bill be:</p>
                     <div className='choice-toggle'>
@@ -53,13 +77,13 @@ function Referendum() {
                         <p>Rejected</p>
                     </div>
                     <div className='confirm-button-container'>
-                        <button>Confirm My Choice</button>
+                        <button onClick={handleAddClick}>Confirm My Choice</button>
                     </div>
                 </div>
                 <p>Campaign Contributions</p>
                 <p>Full Text</p>
             </div>
-        </div>
+        
     )
 }
 

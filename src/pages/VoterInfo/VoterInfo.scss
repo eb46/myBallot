@@ -1,17 +1,67 @@
-@import './src/mainSCSS/mixins.scss';
-
+@import "./src/mainSCSS/mixins.scss";
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap");
 
 .VoterInfo {
-  width: 50%;
-  margin: auto;
-
-  h1 {
-    padding: 2em 0 1em 0;
+  .backButton {
+    @include backButton();
   }
 
-  button {
-    @include buttonBase();
-    margin: 2em 0;
+  h1 {
+    width: 50%;
+    font-family: "Roboto", sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 40px;
+    line-height: 47px;
+    text-align: center;
+    color: #333333;
+    margin: 0 auto;
+    margin-top: 20px;
+  }
 
+  .dataPulled {
+    font-weight: bold;
+    font-size: 28px;
+    width: 75%;
+    margin-top: 100px;
+  }
+
+  .election-date {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+      h3 {
+        font-size: 20px;
+        width: 60%;
+      }
+    
+      p {
+        width: 80%;
+        margin: 0 auto;
+        font-size: 25px;
+        margin-top: 120px;
+      }
+  }
+
+  h3 {
+    font-size: 20px;
+    width: 60%;
+  }
+
+  p {
+    width: 80%;
+    margin: 0 auto;
+    font-size: 25px;
+    margin-top: 120px;
+  }
+
+  .beginButton {
+    @include nextButton();
+    color: #684900;
+    font-size: 26px;
+    font-weight: bold;
+    margin-top: 60px;
   }
 }

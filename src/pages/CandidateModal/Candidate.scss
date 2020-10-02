@@ -1,51 +1,41 @@
-.Candidate {
-    background: darkgrey;
-    height: 100vh;
-    width: 100vw;
-    transition: 500ms ease-out;
+.candidate-modal-bottom,
+.slide-down {
+  display: block;
+  position: fixed;
+  background: lightgrey;
+  bottom: 0vh;
+  left: 0;
+  height: 93vh;
+  width: 100%;
+  z-index: 50;
+  border-radius: 20px 20px 0 0;
 
+  h1 {
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: left;
+    padding-left: 2rem;
+  }
 
-    .slide-down {
-        top: 1000px;
-        transition: 500ms ease;
+  p {
+    text-align: left;
+    padding-left: 2rem;
+    padding-top: 1rem;
+  }
+
+  .exit-icon-container {
+    display: flex;
+    justify-content: flex-end;
+    padding: 1rem;
+
+    i {
+      font-size: 2rem;
+      color: grey;
     }
-
-
+  }
 }
 
-.candidate-modal-bottom {
-    position: absolute;
-    background: lightgrey;
-    top: 62px;
-    left: 0;
-    height: 769px;
-    width: 100%;
-    z-index: 50;
-    border-radius: 20px 20px 0 0;
-
-    h1 {
-        font-size: 2rem;
-        font-weight: bold;
-        text-align: left;
-        padding-left: 2rem;
-    }
-
-    p {
-        text-align: left;
-        padding-left: 2rem;
-        padding-top: 1rem;
-    }
-
-    .exit-icon-container {
-        display: flex;
-        justify-content: flex-end;
-        padding: 1rem;
-
-        i {
-            font-size: 2rem;
-            color: grey;
-            
-        }
-    }
+.slide-down {
+  height: 13vh;
+  transition: height 4s ease;
 }
-

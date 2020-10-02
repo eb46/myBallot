@@ -4,8 +4,10 @@ import "./VoterInfo.scss";
 import { DataContext } from "../../App";
 
 function VoterInfo() {
-  const { data } = useContext(DataContext);
+  const { data, address } = useContext(DataContext);
   const [category, setCategory] = useState([]);
+
+  console.log('address in VoterInfo', address)
 
   useEffect(() => {
     if (data.Categories !== undefined) {
@@ -18,11 +20,19 @@ function VoterInfo() {
 
   return (
     <div className="VoterInfo">
+      <Link to="startform">
+        <button className="backButton">
+          <i class="fas fa-chevron-circle-left"></i>
+        </button>
+      </Link>
       <h1>Upcoming Elections</h1>
-      <h1>{category.Name}</h1>
-
+      <div className="election-date">
+        <h1 className="dataPulled">November 3, 2020</h1>
+        <h3>2020 United States Presidential Election</h3>
+      </div>
+      <p>Complete your ballot selection for this election</p>
       <Link to="/buildballot">
-        <button>Begin myBallot</button>
+        <button className="beginButton">Begin myBallot</button>
       </Link>
     </div>
   );

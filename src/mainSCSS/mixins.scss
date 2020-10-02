@@ -1,7 +1,7 @@
 @mixin buttonBase {
   font-size: 25px;
-  color: #F8F8F8;
-  background-color: #444444;
+  color: #684900;
+  background-color: #efb11e;
   border: none;
   border-radius: 5px;
   padding-top: 15px;
@@ -20,30 +20,36 @@
   // height: 59px;
   // box-shadow: 1px 3px 3px #888888;
   cursor: pointer;
-  margin-top: 58px;
+  margin-top: 38px;
   margin-left: 18px;
 }
 
 @mixin imagePlaceholder {
-  background: gray;
-  width: 259px;
-  height: 259px;
+  width: 240px;
+  height: 240px;
   margin: 2em auto;
 }
 
 @mixin nextButton {
-  font-size: 36px;
+  font-size: 28px;
   color: black;
   cursor: pointer;
-  border-radius: 13px;
+  border-radius: 5px;
   border: none;
   width: 280px;
-  height: 66px;
-  margin: 0 auto;
-  background: lightgray;
+  height: 60px;
+  margin: 0 auto 50px auto;
+  background: #efb11e;
   padding: 10px;
 }
 
 @mixin paragraph {
-  height: 50px;
+  text-align: center;
+  color: #6f6f74;
+  height: 106px;
+  width: 281px;
+  line-height: 23px;
+  font-size: 20px;
+  font-weight: bold;
+  margin: 10px auto 0px auto;
 }

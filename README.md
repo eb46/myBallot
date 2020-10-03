@@ -3,3 +3,7 @@ Personalized Ballot Builder mobile web application for voters in Washington stat
 
 ## Live Link
 https://myballot.netlify.app/
+
+## Contributors
+#### Developers
+##### Eric Bondoc

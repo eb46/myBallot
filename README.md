@@ -33,7 +33,7 @@ myBallot WA is an application that will allow users to input their address to ea
 
 ## Preview
 
-<div float='left'>
+<div float='left' align='center'>
     <span>Onboarding</span>
     <span>Ballot Builder</span>
 </div>

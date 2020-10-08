@@ -33,16 +33,16 @@ myBallot WA is an application that will allow users to input their address to ea
 
 ## Preview
 
-<div >
+<span >
     <h5>Onboarding</h5>
     <img src="./ReadmeAssets/onboarding.gif" alt="ballot builder" width="200"/>
     <p></p>
-</div>
+</span>
 
-<div >
+<span >
     <h5>Ballot Builder</h5>
     <img src="./ReadmeAssets/ballotbuilder.gif" alt="ballot builder" width="200"/>
-</div>
+</span>
 
 
 ## Technologies

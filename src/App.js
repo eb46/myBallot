@@ -3,6 +3,7 @@ import "./App.scss";
 import { Route } from "react-router-dom";
 import axios from "axios";
 
+
 import dataImport from './Data'
 
 import LandingPage from "./pages/LandingPage/Landing";
@@ -16,6 +17,7 @@ import ReferendumModal from "./pages/ReferendumModal/Referendum";
 import CandidateModal from "./pages/CandidateModal/Candidate";
 import VoterInfo from "./pages/VoterInfo/VoterInfo";
 import EndBallotPage from "./pages/EndBallot/EndBallotPage";
+import myPDF from './pages/PDF/myPDF'
 
 export const DataContext = createContext();
 
@@ -29,6 +31,8 @@ function App() {
     LegislativeCandidates: [],
     JudicialCandidates: []
   })
+
+ 
 
   console.log('address', address)
   console.log('ballot', ballot)

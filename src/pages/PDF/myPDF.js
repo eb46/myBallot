@@ -1,69 +1,59 @@
-// import React, { useContext } from 'react';
-// import { DataContext } from "../../App";
+import React, { useContext } from 'react';
+import { DataContext } from "../../App";
+import { Page, Text, View, Document, StyleSheet, Image, Font, PDFViewer } from '@react-pdf/renderer';
+import ReactPDF from '@react-pdf/renderer';
+
+const styles = StyleSheet.create({
+    page: {
+      flexDirection: 'row',
+      backgroundColor: '#E4E4E4'
+    },
+    section: {
+      margin: 10,
+      padding: 10,
+      flexGrow: 1
+    },
+    viewer: {
+        width: '90%',
+        height: '100vh',
+        paddingTop: '10px'
+    }
+  });
 
 
-// function myPDF() {
-//   const { ballot, setBallot} = useContext(DataContext);
 
 
+function MyDocument({ballot}) {
+    console.log('ballot in myPDF', ballot)
+return(
+  <Document>
+    <Page size="A4">
+         <View className="catCard">
+            <Text>Federal Candidates</Text>
+            {ballot.FederalCandidates.map((candidate) => (
+              <View className="infoCard">
+                <Text className="position">{candidate.position}</Text>
+                <Text className="name">{candidate.name}</Text>
+              </View>
+            ))}
+          </View>
+    </Page>
+  </Document>
+)};
 
-//     return (
-//         <div id="PDF">
-//           <div className="catCard">
-//             <h2>Federal Candidates</h2>
-//             {ballot.FederalCandidates.map((candidate) => (
-//               <div className="infoCard">
-//                 <p className="position">{candidate.position}</p>
-//                 <p className="name">{candidate.name}</p>
-//               </div>
-//             ))}
-//           </div>
+  const ViewPDF = ()=>{
+        const { ballot, setBallot } = useContext(DataContext);
 
-//           <div className="catCard">
-//             <h2>Statewide Candidates</h2>
-//             {ballot.StatewideCandidates.map((candidate) => (
-//               <div className="infoCard">
-//                 <p className="position">{candidate.position}</p>
-//                 <p className="name">{candidate.name}</p>
-//               </div>
-//             ))}
-//           </div>
+      return(
+        <PDFViewer style={styles.viewer}>
+            <MyDocument ballot={ballot}/>
+        </PDFViewer>
+      )
 
-//           <div className="catCard">
-//             <h2>Judicial Candidates</h2>
-//             {ballot.JudicialCandidates.map((candidate) => (
-//               <div className="infoCard">
-//                 <p className="position">{candidate.position}</p>
-//                 <p className="name">{candidate.name}</p>
-//               </div>
-//             ))}
-//           </div>
+  }
+  
 
-//           <div className="catCard">
-//             <h2>Legislative Candidates</h2>
-//             {ballot.LegislativeCandidates.map((candidate) => (
-//               <div className="infoCard">
-//                 <p className="position">{candidate.position}</p>
-//                 <p className="name">{candidate.name}</p>
-//               </div>
-//             ))}
-//           </div>
+  
+  
 
-//           <div className="catCard">
-//             <h2>Measures</h2>
-//             {ballot.Measures.map((measure) => (
-//               <div className="infoCard">
-//                 <div className="infoCardBox">
-//                   <p className="position">{measure.name}</p>
-//                   <p className="name">
-//                     {measure.isApproved ? "Approved" : "Rejected"}
-//                   </p>
-//                 </div>
-//               </div>
-//             ))}
-//           </div>
-//         </div>
-//     )
-// }
-
-// export default myPDF;
+export default ViewPDF

@@ -2,6 +2,9 @@ import React, { useState, useEffect, createContext } from "react";
 import "./App.scss";
 import { Route } from "react-router-dom";
 import axios from "axios";
+import { PDFViewer } from '@react-pdf/renderer';
+
+
 
 import dataImport from './Data'
 
@@ -16,6 +19,7 @@ import ReferendumModal from "./pages/ReferendumModal/Referendum";
 import CandidateModal from "./pages/CandidateModal/Candidate";
 import VoterInfo from "./pages/VoterInfo/VoterInfo";
 import EndBallotPage from "./pages/EndBallot/EndBallotPage";
+import MyPDF from './pages/PDF/myPDF'
 
 export const DataContext = createContext();
 
@@ -29,6 +33,8 @@ function App() {
     LegislativeCandidates: [],
     JudicialCandidates: []
   })
+
+ 
 
   console.log('address', address)
   console.log('ballot', ballot)
@@ -63,6 +69,7 @@ function App() {
         <Route path="/referendum" component={ReferendumModal} />
         <Route path="/candidate" component={CandidateModal} />
         <Route path="/endballot" component={EndBallotPage} />
+        <Route path="/mypdf" component={MyPDF} />
       </DataContext.Provider>
     </div>
   );

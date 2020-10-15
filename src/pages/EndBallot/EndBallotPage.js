@@ -1,31 +1,49 @@
 import React, { useContext } from "react";
 import { DataContext } from "../../App";
 import { Link } from "react-router-dom";
-import { Page, Text, View, Document, StyleSheet } from "@react-pdf/renderer";
+import Printer, { print } from "react-pdf-print";
+// import html2canvas from "html2canvas";
+// import { jsPDF } from "jspdf";
+import MyPDF from '../PDF/myPDF'
+import { PDFViewer, StyleSheet } from '@react-pdf/renderer';
+import MyDocument from '../PDF/myPDF'
+
 
 import "./EndBallotPage.scss";
 import dklogo from "../../images/myBallotWA_Black.svg";
 import printthis from "../../images/myballotWA_print.svg";
 import email from "../../images/myballotWA_email.svg";
 
-// Create styles
 const styles = StyleSheet.create({
-  page: {
-    flexDirection: "row",
-    backgroundColor: "#E4E4E4",
-  },
-  section: {
-    margin: 10,
-    padding: 10,
-    flexGrow: 1,
-  },
+  viewer: {
+      width: '80%',
+      height: '80vh',
+      paddingTop: '10px'
+  }
 });
+
+const printIds = ["print1"];
 
 function EndBallotPage() {
   const { ballot, setBallot } = useContext(DataContext);
 
+  // const handleDownloadClick = () => {
+  //   const input = document.getElementById("pdfDoc");
+  //   html2canvas(input).then((canvas) => {
+      
+  //     const imgData = canvas.toDataURL("image/png");
+  //     const pdf = new jsPDF('p', 'px', 'a4');
+  //     let width = pdf.internal.pageSize.getWidth();
+  //     let height = pdf.internal.pageSize.getHeight();
+  //     console.log(`height: ${height}, width: ${width}`)
+  //     pdf.addImage(imgData, "PNG", 0, 0, width, height);
+  //     pdf.save("myballot.pdf");
+  //   });
+  // };
+
   return (
     <div className="EndBallotPage">
+      
       <div className="nav-links">
         <Link className="start-over-button" to="/startform">
           Start Over
@@ -35,22 +53,19 @@ function EndBallotPage() {
           <i class="far fa-question-circle"></i>
         </div> */}
       </div>
-      <Document>
-        <Page size="A4" style={styles.page}>
-          <img id="logo" src={dklogo} alt="Site logo. myBallotWA" />
-          <p>ELECTION: November 3, 2020</p>
-          <p>Below is your completed ballot</p>
-          <div id="icon-container">
-            <button id="print">
-              <img src={printthis} alt="Click image to print ballot" />
-            </button>
-            <button id="email">
-              <img src={email} alt="Click image to email ballot" />
-            </button>
-            <button id="email">
-              <img src={email} alt="Click image to email ballot" />
-            </button>
-          </div>
+        <img id="logo" src={dklogo} alt="Site logo. myBallotWA" />
+        <p>ELECTION: November 3, 2020</p>
+        <p>Below is your completed ballot</p>
+        <div id="icon-container">
+            <Link to='/mypdf'>
+              <button id="print">
+                <img src={printthis} alt="Click image to print ballot" />
+              </button>
+            </Link>
+          <button id="email">
+            <img src={email} alt="Click image to email ballot" />
+          </button>
+        </div>
 
           <div id="ballot-container">
             <div className="catCard">
@@ -107,9 +122,7 @@ function EndBallotPage() {
               ))}
             </div>
           </div>
-        </Page>
-      </Document>
-    </div>
+      </div>
   );
 }
 

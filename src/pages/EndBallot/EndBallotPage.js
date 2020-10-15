@@ -57,9 +57,11 @@ function EndBallotPage() {
         <p>ELECTION: November 3, 2020</p>
         <p>Below is your completed ballot</p>
         <div id="icon-container">
-          <button onClick={() => window.print()} id="print">
-            <img src={printthis} alt="Click image to print ballot" />
-          </button>
+            <Link to='/mypdf'>
+              <button id="print">
+                <img src={printthis} alt="Click image to print ballot" />
+              </button>
+            </Link>
           <button id="email">
             <img src={email} alt="Click image to email ballot" />
           </button>

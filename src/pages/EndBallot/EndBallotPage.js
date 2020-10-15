@@ -53,86 +53,76 @@ function EndBallotPage() {
           <i class="far fa-question-circle"></i>
         </div> */}
       </div>
-      {/* <div id='pdfDoc'>
-        <MyPDF dklogo={dklogo}/>
-      </div> */}
-     
         <img id="logo" src={dklogo} alt="Site logo. myBallotWA" />
         <p>ELECTION: November 3, 2020</p>
         <p>Below is your completed ballot</p>
         <div id="icon-container">
-          <Link to='/mypdf'>
-            <button id="print">
-              <img src={printthis} alt="Click image to print ballot" />
-            </button>
-          </Link>
-          <button id="email" >
+            <Link to='/mypdf'>
+              <button id="print">
+                <img src={printthis} alt="Click image to print ballot" />
+              </button>
+            </Link>
+          <button id="email">
             <img src={email} alt="Click image to email ballot" />
           </button>
         </div>
 
-        <div id="ballot-container">
-          <div className="catCard">
-            <h2>Federal Candidates</h2>
-            {ballot.FederalCandidates.map((candidate) => (
-              <div className="infoCard">
-                <p className="position">{candidate.position}</p>
-                <p className="name">{candidate.name}</p>
-              </div>
-            ))}
-          </div>
-
-          <div className="catCard">
-            <h2>Statewide Candidates</h2>
-            {ballot.StatewideCandidates.map((candidate) => (
-              <div className="infoCard">
-                <p className="position">{candidate.position}</p>
-                <p className="name">{candidate.name}</p>
-              </div>
-            ))}
-          </div>
-
-          <div className="catCard">
-            <h2>Judicial Candidates</h2>
-            {ballot.JudicialCandidates.map((candidate) => (
-              <div className="infoCard">
-                <p className="position">{candidate.position}</p>
-                <p className="name">{candidate.name}</p>
-              </div>
-            ))}
-          </div>
-
-          <div className="catCard">
-            <h2>Legislative Candidates</h2>
-            {ballot.LegislativeCandidates.map((candidate) => (
-              <div className="infoCard">
-                <p className="position">{candidate.position}</p>
-                <p className="name">{candidate.name}</p>
-              </div>
-            ))}
-          </div>
-
-          <div className="catCard">
-            <h2>Measures</h2>
-            {ballot.Measures.map((measure) => (
-              <div className="infoCard">
-                <div className="infoCardBox">
-                  <p className="position">{measure.name}</p>
-                  <p className="name">
-                    {measure.isApproved ? "Approved" : "Rejected"}
-                  </p>
+          <div id="ballot-container">
+            <div className="catCard">
+              <h2>Federal Candidates</h2>
+              {ballot.FederalCandidates.map((candidate) => (
+                <div className="infoCard">
+                  <p className="position">{candidate.position}</p>
+                  <p className="name">{candidate.name}</p>
                 </div>
-              </div>
-            ))}
+              ))}
+            </div>
+
+            <div className="catCard">
+              <h2>Statewide Candidates</h2>
+              {ballot.StatewideCandidates.map((candidate) => (
+                <div className="infoCard">
+                  <p className="position">{candidate.position}</p>
+                  <p className="name">{candidate.name}</p>
+                </div>
+              ))}
+            </div>
+
+            <div className="catCard">
+              <h2>Judicial Candidates</h2>
+              {ballot.JudicialCandidates.map((candidate) => (
+                <div className="infoCard">
+                  <p className="position">{candidate.position}</p>
+                  <p className="name">{candidate.name}</p>
+                </div>
+              ))}
+            </div>
+
+            <div className="catCard">
+              <h2>Legislative Candidates</h2>
+              {ballot.LegislativeCandidates.map((candidate) => (
+                <div className="infoCard">
+                  <p className="position">{candidate.position}</p>
+                  <p className="name">{candidate.name}</p>
+                </div>
+              ))}
+            </div>
+
+            <div className="catCard">
+              <h2>Measures</h2>
+              {ballot.Measures.map((measure) => (
+                <div className="infoCard">
+                  <div className="infoCardBox">
+                    <p className="position">{measure.name}</p>
+                    <p className="name">
+                      {measure.isApproved ? "Approved" : "Rejected"}
+                    </p>
+                  </div>
+                </div>
+              ))}
+            </div>
           </div>
-        </div>
-
-
-        {/* <PDFViewer style={styles.viewer}>
-            <MyDocument ballot={ballot}/>
-        </PDFViewer> */}
-      
-    </div>
+      </div>
   );
 }
 

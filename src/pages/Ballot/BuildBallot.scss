@@ -1,125 +1,129 @@
-@import './src/mainSCSS/mixins.scss';
+@import "./src/mainSCSS/mixins.scss";
 
 .ballot-measure {
-    background-color: #339441;
-    height: auto;
-    min-height: 812px;
+  background-color: #339441;
+  height: auto;
+  min-height: 100vh;
 
-    .slide-down {
-        top: 1000px;
-        transition: 500ms ease;
-        display: none;
-    }
+  .slide-down {
+    top: 1000px;
+    transition: 500ms ease;
+    display: none;
+  }
 
-    .nav-links {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
+  .nav-links {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 
-        .start-over-button {
-            text-decoration: none;
-            color: white;
-            padding: 2rem 2rem 0 2rem;
+    .start-over-button {
+      text-decoration: none;
+      color: white;
+      padding: 2rem 2rem 0 2rem;
 
-            &:hover {
-                color: gray;
-            }
-    
-            &:visited {
-                color: white;
-            }
-        }
-    }
+      &:hover {
+        color: gray;
+      }
 
-    button {
-        @include buttonBase();
-        background-color: #EFB11E;
-        color: #684900;
-        font-size: 22px;
-        font-weight: bold;
-        margin: 2.5rem 0 1.5rem 0;
-        height: 61px;
-        width: 327px;
-        padding: 1rem 2.5rem;
-        border-radius: 5px;
-    }     
-
-    .election-date {
-        margin-bottom: 1.5rem;
+      &:visited {
         color: white;
-        font-size: 15px;
-        font-weight: bold;
+      }
+    }
+  }
+
+  button {
+    @include buttonBase();
+    background-color: #efb11e;
+    color: #684900;
+    font-size: 22px;
+    font-weight: bold;
+    margin: 2.5rem 0 1.5rem 0;
+    height: 61px;
+    width: 327px;
+    padding: 1rem 2.5rem;
+    border-radius: 5px;
+  }
+
+  .election-date {
+    margin-bottom: 1.5rem;
+    color: white;
+    font-size: 15px;
+    font-weight: bold;
+  }
+
+  .ballot-measure-instructions {
+    width: 70%;
+    margin: 1rem auto 2rem auto;
+    color: white;
+    font-size: 15px;
+    font-weight: bold;
+  }
+
+  .help-container {
+    padding: 2rem 2rem 0 0;
+    text-align: right;
+    color: #ffd520;
+    i {
+      margin: 5px;
+    }
+  }
+
+  .logo {
+    margin: 1rem 0 2rem 0;
+  }
+
+  .category-card {
+    display: flex;
+    justify-content: space-between;
+    text-transform: uppercase;
+    border-radius: 5px;
+    margin: 1rem 1.5rem;
+    padding: 0.2rem 0;
+    font-weight: bold;
+    text-align: left;
+    font-size: 15px;
+    background: #f4f4f4;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+
+    .card-title {
+      display: flex;
+      padding: 1rem 0 1rem 1rem;
+      width: 100%;
+
+      p {
+        width: 200px;
+      }
     }
 
-    .ballot-measure-instructions {
-        width: 70%;
-        margin: 1rem auto 2rem auto;
-        color: white;
-        font-size: 15px;
-        font-weight: bold;
+    .card-count {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 1rem 1rem 1rem 0;
+
+      p {
+        font-size: 14px;
+        color: gray;
+      }
     }
 
-    .help-container {
-        padding: 2rem 2rem 0 0;
-        text-align: right;
-        color: #FFD520;
-        i {
-            margin: 5px;
-        }
+    .card-arrow {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-left: 1px solid gray;
+      border-radius: 0 5px 5px 0;
+      background: #f4f4f4;
+
+      i {
+        margin: 0 1rem;
+      }
     }
+  }
+}
 
-    .logo {
-        margin: 1rem 0 2rem 0;
-    }
-
-    .category-card {
-        display: flex;
-        justify-content: space-between;
-        text-transform: uppercase;
-        border-radius: 5px;
-        margin: 1rem 1.5rem;
-        padding: .2rem 0;
-        font-weight: bold;
-        text-align: left;
-        font-size: 15px;
-        background: #F4F4F4;
-        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
-        border-radius: 5px;
-
-        .card-title {
-            display: flex;
-            padding: 1rem 0 1rem 1rem;
-            width: 100%;
-
-            p {
-                width: 200px;
-            }
-        }
-
-        .card-count {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            padding: 1rem 1rem 1rem 0;
-
-
-            p {
-                font-size: 14px;
-                color: gray;
-            }
-        }
-
-        .card-arrow {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            border-left: 1px solid gray;
-            border-radius: 0 5px 5px 0;
-            background: #F4F4F4;
-
-            i {
-                margin: 0 1rem;
-            }
-        }
-    }
+.card-container {
+  max-width: 700px;
+  margin: 0 auto;
 }
